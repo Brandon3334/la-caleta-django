@@ -1,0 +1,9 @@
+Herramienta usada: asistente de ia que viene en visual coopilot chat
+
+Uso que se le dio: al principio de la evaluación le pedi ayuda con los comandos para crear el entorno virtual pero solo los finales ya que se me habían olvidado
+
+Segundo uso: luego tuve varios errores porque al momento de generar la pagina me salía ese error amarillo que no mostraba bien y algo estaba mal escrito le pedi ayuda para poder identificar donde estaba el error del código y poder cambiarlo yo mismo
+
+Tercer uso: tuve problemas al momento de usar una imagen esta no se mostraba correctamente en la pagina solo salia el nombre de la imagen por ejemplo caldillo_de_congrio.jpg entonces le pregunte a la ia porque sucedia le dije que solo me explicara de el porque para poder hacerlo 
+
+Cuarto uso:

@@ -1,0 +1,50 @@
+:root {
+    --azul: #12324a;
+    --turquesa: #1b8a8f;
+    --arena: #f7f1e6;
+    --coral: #e87961;
+    --texto: #263238;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: var(--arena);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+}
+.cabecera {
+    align-items: center;
+    background: var(--azul);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem max(1.5rem, calc((100% - 1100px) / 2));
+}
+.marca { align-items: center; color: white; display: flex; font-size: 1.5rem; font-weight: bold; gap: .7rem; text-decoration: none; }
+.marca img { height: 46px; width: 46px; }
+.cabecera p { margin: 0; opacity: .85; }
+.contenedor { margin: 0 auto; max-width: 1100px; padding: 3rem 1.5rem; }
+.hero { margin-bottom: 2rem; }
+.hero h1, .detalle h1 { color: var(--azul); font-size: clamp(2rem, 5vw, 3.5rem); margin: .3rem 0 1rem; }
+.eyebrow, .categoria { color: var(--turquesa); font-size: .8rem; font-weight: bold; letter-spacing: .12em; }
+.resumen { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.resumen div { background: white; border-left: 4px solid var(--coral); border-radius: 8px; display: flex; flex-direction: column; padding: 1rem 1.5rem; }
+.resumen strong { color: var(--azul); font-size: 1.5rem; }
+.resumen span { color: #667; font-size: .9rem; }
+.grilla { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.tarjeta, .detalle { background: white; border-radius: 12px; box-shadow: 0 5px 18px #12324a18; padding: 1.5rem; }
+.tarjeta h2 { color: var(--azul); margin: .6rem 0; }
+.tarjeta p { line-height: 1.5; min-height: 3em; }
+.tarjeta-pie { align-items: center; display: flex; justify-content: space-between; margin-top: 1.2rem; }
+.tarjeta-pie strong { color: var(--coral); font-size: 1.25rem; }
+.boton { background: var(--turquesa); border-radius: 6px; color: white; padding: .6rem .8rem; text-decoration: none; }
+.boton:hover { background: var(--azul); }
+.volver { color: var(--turquesa); display: inline-block; margin-bottom: 1.5rem; text-decoration: none; }
+.detalle { max-width: 760px; }
+.descripcion { font-size: 1.1rem; line-height: 1.7; }
+.datos { border-top: 1px solid #ddd; margin-top: 2rem; }
+.datos p { display: flex; justify-content: space-between; padding: .8rem 0; }
+.datos strong { color: var(--azul); }
+.pie { color: #667; padding: 2rem; text-align: center; }
+@media (max-width: 600px) { .cabecera { align-items: flex-start; flex-direction: column; gap: .6rem; } .resumen { flex-direction: column; } }

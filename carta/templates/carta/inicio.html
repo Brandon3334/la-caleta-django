@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block titulo %}Carta | La Caleta{% endblock %}
+
+{% block contenido %}
+<section class="hero">
+    <p class="eyebrow">Nuestra carta</p>
+    <h1>Platos con sabor a costa</h1>
+    <p>Descubre preparaciones tradicionales hechas con ingredientes locales.</p>
+</section>
+
+<section class="resumen">
+    <div><strong>${{ promedio }}</strong><span>Precio promedio</span></div>
+    <div><strong>{{ vegetarianos }}</strong><span>Platos vegetarianos</span></div>
+</section>
+
+<section class="grilla">
+    {% for p in platos %}
+    <article class="tarjeta">
+        <span class="categoria">{{ p.categoria|upper }}</span>
+        <h2>{{ p.nombre }}</h2>
+        <p>{{ p.descripcion|truncatewords:12 }}</p>
+        <div class="tarjeta-pie">
+            <strong>${{ p.precio }}</strong>
+            <a class="boton" href="{% url 'carta:detalle' p.id %}">Ver detalle</a>
+        </div>
+    </article>
+    {% empty %}
+    <p>No hay platos disponibles.</p>
+    {% endfor %}
+</section>
+{% endblock %}

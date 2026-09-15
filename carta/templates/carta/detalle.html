@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ plato.nombre }} | La Caleta{% endblock %}
+
+{% block contenido %}
+<a class="volver" href="{% url 'carta:inicio' %}">&larr; Volver a la carta</a>
+<article class="detalle">
+    <span class="categoria">{{ plato.categoria|lower }}</span>
+    <h1>{{ plato.nombre }}</h1>
+    <p class="descripcion">{{ plato.descripcion }}</p>
+    <div class="datos">
+        <p><span>Precio</span><strong>${{ plato.precio }}</strong></p>
+        <p><span>Con propina (10%)</span><strong>${{ precio_propina }}</strong></p>
+        <p><span>Preparación</span><strong>{{ plato.tiempo }} minutos</strong></p>
+        <p><span>Vegetariano</span><strong>{{ plato.vegetariano|yesno:"Sí,No" }}</strong></p>
+        <p><span>Etiqueta</span><strong>{{ etiqueta }}</strong></p>
+    </div>
+</article>
+{% endblock %}
